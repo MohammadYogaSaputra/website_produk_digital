@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Doe - Pengembang & Desainer Web</title>
+
+    <!-- Meta SEO -->
+    <meta
+      name="description"
+      content="Portofolio digital John Doe, seorang pengembang web dan desainer UI/UX yang bersemangat dalam menciptakan solusi digital yang inovatif dan fungsional."
+    />
+    <meta
+      name="keywords"
+      content="portofolio, pengembang web, desainer ui/ux, freelancer, html, css, javascript, react, tailwindcss"
+    />
+    <meta name="author" content="John Doe" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://placehold.co/32x32/a5b4fc/1e293b?text=JD"
+      type="image/png"
+    />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ionicons for Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <style>
+      /* Custom Styles */
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        position: relative;
+      }
+      /* Style untuk scrollbar (opsional, untuk estetika) */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; /* slate-900 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4f46e5; /* indigo-600 */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6366f1; /* indigo-500 */
+      }
+      /* Class untuk animasi masuk */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Efek mengetik */
+      .typing-cursor {
+        border-right: 2px solid #a5b4fc; /* indigo-300 */
+        animation: blink 0.7s steps(1) infinite;
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      /* Navigasi aktif */
+      .nav-link.active {
+        color: #a5b4fc; /* indigo-300 */
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-300">
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header
+      id="header"
+      class="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#home" class="text-2xl font-bold text-indigo-400">JD.</a>
+
+        <div id="nav-menu" class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="nav-link hover:text-indigo-400 transition-colors"
+            >Beranda</a
+          >
+          <a
+            href="#about"
+            class="nav-link hover:text-indigo-400 transition-colors"
+            >Tentang</a
+          >
+          <a
+            href="#services"
+            class="nav-link hover:text-indigo-400 transition-colors"
+            >Layanan</a
+          >
+          <a
+            href="#portfolio"
+            class="nav-link hover:text-indigo-400 transition-colors"
+            >Portofolio</a
+          >
+          <a
+            href="#contact"
+            class="nav-link hover:text-indigo-400 transition-colors"
+            >Kontak</a
+          >
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md hover:bg-slate-700"
+          >
+            <ion-icon name="menu-outline" class="text-2xl"></ion-icon>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-slate-800">
+        <a href="#home" class="block py-2 px-6 text-sm hover:bg-slate-700"
+          >Beranda</a
+        >
+        <a href="#about" class="block py-2 px-6 text-sm hover:bg-slate-700"
+          >Tentang</a
+        >
+        <a href="#services" class="block py-2 px-6 text-sm hover:bg-slate-700"
+          >Layanan</a
+        >
+        <a href="#portfolio" class="block py-2 px-6 text-sm hover:bg-slate-700"
+          >Portofolio</a
+        >
+        <a href="#contact" class="block py-2 px-6 text-sm hover:bg-slate-700"
+          >Kontak</a
+        >
+      </div>
+    </header>
+
+    <main class="w-full">
+      <!-- ===== HERO SECTION ===== -->
+      <section id="home" class="min-h-screen flex items-center pt-20">
+        <div
+          class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-center gap-12"
+        >
+          <div class="md:w-1/2 text-center md:text-left reveal">
+            <h1
+              class="text-4xl md:text-6xl font-extrabold leading-tight text-white"
+            >
+              Halo, saya John Doe
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-400">
+              Saya seorang
+              <span
+                id="typing-text"
+                class="font-semibold text-indigo-400"
+              ></span
+              ><span class="typing-cursor">&nbsp;</span>
+            </p>
+            <p class="mt-2 text-md text-slate-500 max-w-lg mx-auto md:mx-0">
+              Membawa ide menjadi kenyataan melalui kode dan desain yang
+              intuitif.
+            </p>
+            <div
+              class="mt-8 flex flex-wrap justify-center md:justify-start gap-4"
+            >
+              <a
+                href="#portfolio"
+                class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg shadow-indigo-600/30"
+              >
+                Lihat Portofolio
+              </a>
+              <a
+                href="#contact"
+                class="bg-slate-800 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:bg-slate-700 transition-transform transform hover:scale-105 shadow-lg"
+              >
+                Hubungi Saya
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/3 reveal">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-2xl opacity-50"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"
+                alt="Foto Profil John Doe"
+                class="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-slate-800"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section id="about" class="py-20 bg-slate-800">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12 reveal text-white">
+            Tentang Saya
+          </h2>
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3 reveal">
+              <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1887&auto=format&fit=crop"
+                alt="John Doe di ruang kerja"
+                class="rounded-lg shadow-xl w-full"
+              />
+            </div>
+            <div class="md:w-2/3 reveal">
+              <p class="text-lg mb-4 text-slate-400">
+                Saya adalah seorang pengembang web dan desainer UI/UX dengan
+                pengalaman lebih dari 5 tahun dalam industri teknologi. Gairah
+                saya terletak pada penyelesaian masalah yang kompleks dan
+                mengubahnya menjadi antarmuka yang indah, intuitif, dan
+                fungsional.
+              </p>
+              <p class="mb-6 text-slate-400">
+                Saya percaya bahwa kolaborasi yang baik adalah kunci kesuksesan
+                proyek. Saya selalu antusias untuk belajar teknologi baru dan
+                menerapkannya untuk menciptakan produk digital yang lebih baik.
+              </p>
+              <!-- Skill Bars -->
+              <div class="space-y-4">
+                <div class="skill-bar">
+                  <div class="flex justify-between mb-1">
+                    <span class="font-semibold text-slate-200">HTML & CSS</span>
+                    <span class="text-sm text-slate-400">95%</span>
+                  </div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5">
+                    <div
+                      class="bg-indigo-500 h-2.5 rounded-full transition-all duration-1000"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="flex justify-between mb-1">
+                    <span class="font-semibold text-slate-200"
+                      >JavaScript (ES6+)</span
+                    >
+                    <span class="text-sm text-slate-400">90%</span>
+                  </div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5">
+                    <div
+                      class="bg-indigo-500 h-2.5 rounded-full transition-all duration-1000"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="flex justify-between mb-1">
+                    <span class="font-semibold text-slate-200"
+                      >React & Next.js</span
+                    >
+                    <span class="text-sm text-slate-400">85%</span>
+                  </div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5">
+                    <div
+                      class="bg-indigo-500 h-2.5 rounded-full transition-all duration-1000"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="flex justify-between mb-1">
+                    <span class="font-semibold text-slate-200"
+                      >UI/UX Design (Figma)</span
+                    >
+                    <span class="text-sm text-slate-400">92%</span>
+                  </div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5">
+                    <div
+                      class="bg-indigo-500 h-2.5 rounded-full transition-all duration-1000"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES SECTION ===== -->
+      <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12 reveal text-white">
+            Layanan yang Saya Tawarkan
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1: Web Development -->
+            <div
+              class="bg-slate-800 p-8 rounded-lg shadow-lg text-center reveal hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div class="inline-block text-indigo-400 mb-4">
+                <ion-icon name="code-slash-outline" class="text-5xl"></ion-icon>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Pengembangan Web
+              </h3>
+              <p class="text-slate-400">
+                Membangun website yang cepat, responsif, dan fungsional dari
+                awal hingga akhir menggunakan teknologi modern.
+              </p>
+            </div>
+            <!-- Service Card 2: UI/UX Design -->
+            <div
+              class="bg-slate-800 p-8 rounded-lg shadow-lg text-center reveal hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div class="inline-block text-indigo-400 mb-4">
+                <ion-icon
+                  name="color-palette-outline"
+                  class="text-5xl"
+                ></ion-icon>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-white">Desain UI/UX</h3>
+              <p class="text-slate-400">
+                Merancang antarmuka yang menarik secara visual, mudah digunakan,
+                dan berpusat pada pengalaman pengguna.
+              </p>
+            </div>
+            <!-- Service Card 3: SEO -->
+            <div
+              class="bg-slate-800 p-8 rounded-lg shadow-lg text-center reveal hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div class="inline-block text-indigo-400 mb-4">
+                <ion-icon name="rocket-outline" class="text-5xl"></ion-icon>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-white">Konsultasi SEO</h3>
+              <p class="text-slate-400">
+                Membantu website Anda mendapatkan peringkat lebih tinggi di
+                mesin pencari melalui optimasi teknis dan konten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PORTFOLIO SECTION ===== -->
+      <section id="portfolio" class="py-20 bg-slate-800">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12 reveal text-white">
+            Portofolio Proyek
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div
+              class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden group reveal"
+              data-title="Sistem Manajemen E-commerce"
+              data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+              data-desc="Platform e-commerce lengkap dengan dasbor admin, manajemen produk, dan integrasi pembayaran. Dibangun dengan React dan Node.js."
+              data-tech="React, Node.js, MongoDB, TailwindCSS"
+            >
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                  alt="Proyek 1"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 class="text-white text-xl font-bold text-center px-4">
+                    Sistem Manajemen E-commerce
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div
+              class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden group reveal"
+              data-title="Aplikasi Pelacak Kebugaran"
+              data-img="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1964&auto=format&fit=crop"
+              data-desc="Aplikasi seluler untuk melacak aktivitas olahraga, nutrisi, dan kemajuan pengguna. Desain UI/UX yang bersih dan modern."
+              data-tech="React Native, Firebase, Figma"
+            >
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1964&auto=format&fit=crop"
+                  alt="Proyek 2"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 class="text-white text-xl font-bold text-center px-4">
+                    Aplikasi Pelacak Kebugaran
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Project Card 3 -->
+            <div
+              class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden group reveal"
+              data-title="Website Portofolio Fotografer"
+              data-img="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop"
+              data-desc="Website portofolio yang elegan dan minimalis untuk seorang fotografer profesional, dengan fokus pada galeri visual yang menakjubkan."
+              data-tech="HTML5, CSS3, Vanilla JS, GSAP"
+            >
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop"
+                  alt="Proyek 3"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 class="text-white text-xl font-bold text-center px-4">
+                    Website Portofolio Fotografer
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Add more project cards as needed -->
+            <div
+              class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden group reveal"
+              data-title="Proyek 4"
+              data-img="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2231&auto=format&fit=crop"
+              data-desc="Deskripsi Proyek 4"
+              data-tech="Tech 1, Tech 2"
+            >
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2231&auto=format&fit=crop"
+                  alt="Proyek 4"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 class="text-white text-xl font-bold">Proyek 4</h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden group reveal"
+              data-title="Proyek 5"
+              data-img="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop"
+              data-desc="Deskripsi Proyek 5"
+              data-tech="Tech 1, Tech 2"
+            >
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop"
+                  alt="Proyek 5"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 class="text-white text-xl font-bold">Proyek 5</h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden group reveal"
+              data-title="Proyek 6"
+              data-img="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop"
+              data-desc="Deskripsi Proyek 6"
+              data-tech="Tech 1, Tech 2"
+            >
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop"
+                  alt="Proyek 6"
+                  class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 class="text-white text-xl font-bold">Proyek 6</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS SECTION ===== -->
+      <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12 reveal text-white">
+            Apa Kata Klien
+          </h2>
+          <div class="relative reveal">
+            <div id="testimonial-carousel" class="overflow-hidden">
+              <div
+                id="testimonial-track"
+                class="flex transition-transform duration-500 ease-in-out"
+              >
+                <!-- Testimonial Items -->
+                <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+                  <div class="bg-slate-800 p-8 rounded-lg shadow-lg h-full">
+                    <p class="text-slate-400 mb-6">
+                      "Kerja sama dengan John sangat luar biasa. Dia tidak hanya
+                      menguasai teknis, tapi juga sangat komunikatif dan
+                      memahami visi kami dengan baik. Hasilnya melebihi
+                      ekspektasi!"
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop"
+                        alt="Profil Klien 1"
+                        class="w-12 h-12 rounded-full mr-4 object-cover"
+                      />
+                      <div>
+                        <p class="font-bold text-white">Alice Johnson</p>
+                        <p class="text-sm text-slate-500">CEO, TechCorp</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+                  <div class="bg-slate-800 p-8 rounded-lg shadow-lg h-full">
+                    <p class="text-slate-400 mb-6">
+                      "Profesionalisme dan kualitas kode dari John patut
+                      diacungi jempol. Proyek selesai tepat waktu dan sesuai
+                      dengan budget. Sangat direkomendasikan!"
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887&auto=format&fit=crop"
+                        alt="Profil Klien 2"
+                        class="w-12 h-12 rounded-full mr-4 object-cover"
+                      />
+                      <div>
+                        <p class="font-bold text-white">Bob Williams</p>
+                        <p class="text-sm text-slate-500">
+                          Project Manager, Innovate Ltd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+                  <div class="bg-slate-800 p-8 rounded-lg shadow-lg h-full">
+                    <p class="text-slate-400 mb-6">
+                      "Desain UI/UX yang dibuat John sangat modern dan
+                      user-friendly. Tim kami sangat senang dengan hasilnya.
+                      Proses iterasinya juga sangat cepat dan efisien."
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1887&auto=format&fit=crop"
+                        alt="Profil Klien 3"
+                        class="w-12 h-12 rounded-full mr-4 object-cover"
+                      />
+                      <div>
+                        <p class="font-bold text-white">Carol Davis</p>
+                        <p class="text-sm text-slate-500">
+                          Head of Product, Designify
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section id="contact" class="py-20 bg-slate-800">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-4 reveal text-white">
+            Hubungi Saya
+          </h2>
+          <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto reveal">
+            Punya proyek menarik atau hanya ingin menyapa? Silakan isi form di
+            bawah atau hubungi saya melalui email.
+          </p>
+          <div class="max-w-2xl mx-auto reveal">
+            <!-- Ganti "YOUR_FORM_ID" dengan ID Formspree Anda -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-slate-300"
+                  >Nama</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-white"
+                  placeholder="Nama Anda"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-slate-300"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-white"
+                  placeholder="email@anda.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-slate-300"
+                  >Pesan</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-white"
+                  placeholder="Tulis pesan Anda..."
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg w-full md:w-auto"
+                >
+                  Kirim Pesan
+                </button>
+              </div>
+              <p id="form-status" class="text-center mt-4"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+      <div class="container mx-auto px-6 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+          <a
+            href="#"
+            class="text-slate-400 hover:text-indigo-400 transition-colors"
+            ><ion-icon name="logo-github" class="text-3xl"></ion-icon
+          ></a>
+          <a
+            href="#"
+            class="text-slate-400 hover:text-indigo-400 transition-colors"
+            ><ion-icon name="logo-linkedin" class="text-3xl"></ion-icon
+          ></a>
+          <a
+            href="#"
+            class="text-slate-400 hover:text-indigo-400 transition-colors"
+            ><ion-icon name="logo-instagram" class="text-3xl"></ion-icon
+          ></a>
+          <a
+            href="mailto:email@example.com"
+            class="text-slate-400 hover:text-indigo-400 transition-colors"
+            ><ion-icon name="mail-outline" class="text-3xl"></ion-icon
+          ></a>
+        </div>
+        <div class="mb-6">
+          <!-- Ganti "#" dengan path ke file CV Anda -->
+          <a
+            href="#"
+            download="CV-John-Doe.pdf"
+            class="inline-block bg-slate-800 border border-indigo-500 text-indigo-400 font-semibold px-6 py-2 rounded-lg hover:bg-slate-700 transition-colors"
+          >
+            Unduh CV Saya
+          </a>
+        </div>
+        <p class="text-slate-500 text-sm">
+          &copy; <span id="current-year"></span> John Doe. Dibuat dengan ❤️ dan
+          Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <a
+      href="#"
+      id="to-top-button"
+      class="fixed bottom-5 right-5 p-3 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 opacity-0 pointer-events-none"
+    >
+      <ion-icon name="arrow-up-outline" class="text-2xl"></ion-icon>
+    </a>
+
+    <!-- ===== PROJECT MODAL ===== -->
+    <div
+      id="project-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        id="modal-content"
+        class="bg-slate-800 rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative transform scale-95 transition-transform duration-300"
+      >
+        <button
+          id="modal-close"
+          class="absolute top-4 right-4 text-slate-400 hover:text-white"
+        >
+          <ion-icon name="close-outline" class="text-3xl"></ion-icon>
+        </button>
+        <img
+          id="modal-img"
+          src=""
+          alt="Detail Proyek"
+          class="w-full h-64 object-cover rounded-t-lg"
+        />
+        <div class="p-8">
+          <h3 id="modal-title" class="text-3xl font-bold mb-4 text-white"></h3>
+          <p id="modal-desc" class="text-slate-400 mb-6"></p>
+          <div>
+            <h4 class="font-semibold mb-2 text-white">
+              Teknologi yang Digunakan:
+            </h4>
+            <div id="modal-tech" class="flex flex-wrap gap-2">
+              <!-- Tech tags will be inserted here by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- UTILITY FUNCTIONS ---
+        const select = (el, all = false) =>
+          all ? document.querySelectorAll(el) : document.querySelector(el);
+
+        // --- MOBILE MENU ---
+        const mobileMenuButton = select("#mobile-menu-button");
+        const mobileMenu = select("#mobile-menu");
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        // Close mobile menu when a link is clicked
+        select("a", true).forEach((link) => {
+          link.addEventListener("click", () => {
+            if (mobileMenu.classList.contains("hidden") === false) {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+        });
+
+        // --- STICKY HEADER & ACTIVE NAV LINK ---
+        const header = select("#header");
+        const navLinks = select(".nav-link", true);
+        const sections = select("section", true);
+        window.addEventListener("scroll", () => {
+          // Sticky header shadow
+          if (window.scrollY > 50) {
+            header.classList.add("shadow-lg", "shadow-slate-900/50");
+          } else {
+            header.classList.remove("shadow-lg", "shadow-slate-900/50");
+          }
+          // Active nav link
+          let currentSection = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 150) {
+              currentSection = section.getAttribute("id");
+            }
+          });
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+              link.classList.add("active");
+            }
+          });
+        });
+
+        // --- TYPING EFFECT ---
+        const typingText = select("#typing-text");
+        const words = [
+          "Pengembang Web.",
+          "Desainer UI/UX.",
+          "Pecinta Teknologi.",
+          "Pemecah Masalah.",
+        ];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+          const currentWord = words[wordIndex];
+          const currentChar = isDeleting
+            ? currentWord.substring(0, charIndex - 1)
+            : currentWord.substring(0, charIndex + 1);
+          typingText.textContent = currentChar;
+
+          if (!isDeleting && charIndex < currentWord.length) {
+            charIndex++;
+            setTimeout(type, 150);
+          } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(type, 100);
+          } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+              wordIndex = (wordIndex + 1) % words.length;
+            }
+            setTimeout(type, 1200);
+          }
+        }
+        type();
+
+        // --- SCROLL REVEAL ANIMATION ---
+        const revealElements = select(".reveal", true);
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        revealElements.forEach((el) => revealObserver.observe(el));
+
+        // --- SKILL BAR ANIMATION ---
+        const skillBars = select(".skill-bar", true);
+        const skillObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const bar = entry.target.querySelector(".bg-indigo-500");
+                const percentage = entry.target.querySelector(
+                  ".flex span:last-child"
+                ).textContent;
+                bar.style.width = percentage;
+                skillObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+        skillBars.forEach((bar) => skillObserver.observe(bar));
+
+        // --- PROJECT MODAL ---
+        const projectCards = select(".project-card", true);
+        const modal = select("#project-modal");
+        const modalContent = select("#modal-content");
+        const modalClose = select("#modal-close");
+
+        projectCards.forEach((card) => {
+          card.addEventListener("click", () => {
+            select("#modal-title").textContent = card.dataset.title;
+            select("#modal-img").src = card.dataset.img;
+            select("#modal-desc").textContent = card.dataset.desc;
+            const techContainer = select("#modal-tech");
+            techContainer.innerHTML = "";
+            card.dataset.tech.split(",").forEach((tech) => {
+              const techTag = document.createElement("span");
+              techTag.className =
+                "bg-slate-700 text-sm font-medium px-3 py-1 rounded-full text-slate-300";
+              techTag.textContent = tech.trim();
+              techContainer.appendChild(techTag);
+            });
+            modal.classList.remove("hidden");
+            setTimeout(() => modalContent.classList.remove("scale-95"), 10); // Animation
+          });
+        });
+
+        function closeModal() {
+          modalContent.classList.add("scale-95");
+          setTimeout(() => modal.classList.add("hidden"), 300);
+        }
+        modalClose.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+
+        // --- CAROUSEL (for Testimonials) ---
+        function initCarousel(carouselId, trackId) {
+          const track = select(`#${trackId}`);
+          if (!track) return;
+          const items = track.children;
+          if (items.length === 0) return;
+
+          let itemWidth = items[0].getBoundingClientRect().width;
+          let currentIndex = 0;
+
+          // Simple auto-scroll for testimonials
+          setInterval(() => {
+            const visibleItems = getVisibleItemsCount();
+            currentIndex++;
+            if (currentIndex > items.length - visibleItems) {
+              currentIndex = 0;
+            }
+            updateCarousel();
+          }, 5000); // Change slide every 5 seconds
+
+          function updateCarousel() {
+            if (itemWidth > 0) {
+              track.style.transform = `translateX(-${
+                currentIndex * itemWidth
+              }px)`;
+            }
+          }
+
+          function getVisibleItemsCount() {
+            if (window.innerWidth < 768) return 1;
+            if (window.innerWidth < 1024) return 2;
+            return 3;
+          }
+
+          window.addEventListener("resize", () => {
+            itemWidth =
+              items.length > 0 ? items[0].getBoundingClientRect().width : 0;
+            currentIndex = 0;
+            updateCarousel();
+          });
+
+          itemWidth = items[0].getBoundingClientRect().width;
+        }
+        initCarousel("testimonial-carousel", "testimonial-track");
+
+        // --- BACK TO TOP BUTTON ---
+        const toTopButton = select("#to-top-button");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            toTopButton.classList.remove("opacity-0", "pointer-events-none");
+          } else {
+            toTopButton.classList.add("opacity-0", "pointer-events-none");
+          }
+        });
+
+        // --- CONTACT FORM (FORMSPREE) ---
+        const contactForm = select("#contact-form");
+        const formStatus = select("#form-status");
+        async function handleSubmit(event) {
+          event.preventDefault();
+          const data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: contactForm.method,
+            body: data,
+            headers: { Accept: "application/json" },
+          })
+            .then((response) => {
+              if (response.ok) {
+                formStatus.textContent =
+                  "Terima kasih! Pesan Anda telah terkirim.";
+                formStatus.className = "text-center mt-4 text-green-500";
+                contactForm.reset();
+              } else {
+                response.json().then((data) => {
+                  if (Object.hasOwn(data, "errors")) {
+                    formStatus.textContent = data["errors"]
+                      .map((error) => error["message"])
+                      .join(", ");
+                  } else {
+                    formStatus.textContent =
+                      "Oops! Terjadi kesalahan saat mengirim pesan.";
+                  }
+                  formStatus.className = "text-center mt-4 text-red-500";
+                });
+              }
+            })
+            .catch((error) => {
+              formStatus.textContent =
+                "Oops! Terjadi kesalahan saat mengirim pesan.";
+              formStatus.className = "text-center mt-4 text-red-500";
+            });
+        }
+        contactForm.addEventListener("submit", handleSubmit);
+
+        // --- FOOTER YEAR ---
+        select("#current-year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>
